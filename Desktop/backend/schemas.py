@@ -1,11 +1,15 @@
 from typing import List
+
 from pydantic import BaseModel, Field
 
 
 class AnalyzeRequest(BaseModel):
     target_market: str
     product_type: str
-    ingredients: str = Field(min_length=1, max_length=1000)
+    ingredients: str = Field(
+        min_length=1,
+        max_length=3000
+    )
 
 
 class IngredientIssue(BaseModel):
@@ -24,8 +28,11 @@ class Metrics(BaseModel):
 class AnalyzeResponse(BaseModel):
     overall_status: str
     summary: str
+
     metrics: Metrics
+
     banned: List[IngredientIssue]
     restricted: List[IngredientIssue]
+
     safe: List[str]
     unknown: List[str]

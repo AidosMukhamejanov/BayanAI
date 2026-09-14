@@ -1,0 +1,12 @@
+TEST REGULATORY DOCUMENT
+Market: United Arab Emirates
+Product category: Cosmetics
+
+Ingredient X is prohibited in cosmetic products.
+
+Ingredient Y is allowed only under specific conditions and concentration limits.
+
+Ingredient Z is permitted for use in cosmetic products.
+
+This document is only for testing the BayanAI MVP.
+It is not an official UAE regulation.

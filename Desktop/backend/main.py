@@ -1,13 +1,14 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 
 from schemas import AnalyzeRequest, AnalyzeResponse
+from services.ai_service import analyze_with_ai
 
 
 app = FastAPI(
-    title="Bayan AI API",
-    description="Backend API for Bayan AI",
-    version="0.1.0"
+    title="BayanAI API",
+    description="AI cosmetic regulatory compliance backend",
+    version="0.2.0"
 )
 
 
@@ -23,8 +24,9 @@ app.add_middleware(
 @app.get("/")
 def root():
     return {
-        "service": "Bayan AI API",
-        "status": "running"
+        "service": "BayanAI API",
+        "status": "running",
+        "version": "0.2.0"
     }
 
 
@@ -73,22 +75,31 @@ def get_options():
     "/api/analyze",
     response_model=AnalyzeResponse
 )
-def analyze_product(request: AnalyzeRequest):
+def analyze_product(
+    request: AnalyzeRequest
+):
+    try:
+        result = analyze_with_ai(
+            target_market=request.target_market,
+            product_type=request.product_type,
+            ingredients=request.ingredients
+        )
 
-    # TEMPORARY MOCK RESPONSE
-    # Потом добавлю раг и квен
+        return result
 
-    return {
-        "overall_status": "NEEDS_REVIEW",
-        "summary": "AI analysis will be connected in the next backend version.",
-        "metrics": {
-            "banned": 0,
-            "restricted": 0,
-            "safe": 0,
-            "unknown": 0
-        },
-        "banned": [],
-        "restricted": [],
-        "safe": [],
-        "unknown": []
-    }
+    except ValueError as error:
+        raise HTTPException(
+            status_code=400,
+            detail=str(error)
+        )
+
+    except Exception as error:
+        print(
+            "AI ERROR:",
+            repr(error)
+        )
+
+        raise HTTPException(
+            status_code=500,
+            detail="AI compliance analysis failed"
+        )
