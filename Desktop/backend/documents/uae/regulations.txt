@@ -1,12 +1,276 @@
-TEST REGULATORY DOCUMENT
-Market: United Arab Emirates
-Product category: Cosmetics
+BAYANAI REGULATORY DATASET
+REGION: UNITED ARAB EMIRATES
+VERSION: MVP dataset, prepared 2026-09-14
 
-Ingredient X is prohibited in cosmetic products.
+PRIMARY LEGAL BASIS
+- GSO 1943:2024, Cosmetic Products – Safety Requirements of Cosmetics and Personal Care Products.
+- GSO 1943:2024 references Regulation (EC) No 1223/2009 and its current amendments for the prohibited/restricted substances and the positive lists of colorants, preservatives and UV filters.
+- The Saudi-specific deviation stated in GSO 1943:2024 does not apply to the UAE dataset.
 
-Ingredient Y is allowed only under specific conditions and concentration limits.
+IMPORTANT
+PERMITTED_BASELINE_MVP is an engineering whitelist for the BayanAI MVP.
+It is NOT an official UAE positive list for all cosmetic ingredients.
+It means that this MVP dataset does not identify a specific prohibition or
+restriction for ordinary cosmetic use. Full UAE compliance can still depend
+on formulation, concentration, product type, claims, testing and registration.
 
-Ingredient Z is permitted for use in cosmetic products.
+============================================================
+PERMITTED_BASELINE_MVP
+============================================================
 
-This document is only for testing the BayanAI MVP.
-It is not an official UAE regulation.
+Aqua | alias: Water | status: PERMITTED_BASELINE_MVP
+Glycerin | alias: Glycerol | status: PERMITTED_BASELINE_MVP
+Butylene Glycol | status: PERMITTED_BASELINE_MVP
+Propylene Glycol | status: PERMITTED_BASELINE_MVP
+Pentylene Glycol | status: PERMITTED_BASELINE_MVP
+Propanediol | status: PERMITTED_BASELINE_MVP
+Niacinamide | status: PERMITTED_BASELINE_MVP
+Panthenol | status: PERMITTED_BASELINE_MVP
+Sodium Hyaluronate | status: PERMITTED_BASELINE_MVP
+Hyaluronic Acid | status: PERMITTED_BASELINE_MVP
+Betaine | status: PERMITTED_BASELINE_MVP
+Allantoin | status: PERMITTED_BASELINE_MVP
+Squalane | status: PERMITTED_BASELINE_MVP
+Caprylic/Capric Triglyceride | status: PERMITTED_BASELINE_MVP
+Cetearyl Alcohol | status: PERMITTED_BASELINE_MVP
+Cetyl Alcohol | status: PERMITTED_BASELINE_MVP
+Stearyl Alcohol | status: PERMITTED_BASELINE_MVP
+Behenyl Alcohol | status: PERMITTED_BASELINE_MVP
+Glyceryl Stearate | status: PERMITTED_BASELINE_MVP
+PEG-100 Stearate | status: PERMITTED_BASELINE_MVP
+Dimethicone | status: PERMITTED_BASELINE_MVP
+Cyclopentasiloxane | status: PERMITTED_BASELINE_MVP
+Carbomer | status: PERMITTED_BASELINE_MVP
+Xanthan Gum | status: PERMITTED_BASELINE_MVP
+Sodium Chloride | status: PERMITTED_BASELINE_MVP
+Citric Acid | status: PERMITTED_BASELINE_MVP
+Sodium Citrate | status: PERMITTED_BASELINE_MVP
+Lactic Acid | status: PERMITTED_BASELINE_MVP
+Tocopherol | status: PERMITTED_BASELINE_MVP
+Tocopheryl Acetate | status: PERMITTED_BASELINE_MVP
+Ascorbyl Glucoside | status: PERMITTED_BASELINE_MVP
+Magnesium Ascorbyl Phosphate | status: PERMITTED_BASELINE_MVP
+Sodium Ascorbyl Phosphate | status: PERMITTED_BASELINE_MVP
+Ceramide NP | status: PERMITTED_BASELINE_MVP
+Ceramide AP | status: PERMITTED_BASELINE_MVP
+Ceramide EOP | status: PERMITTED_BASELINE_MVP
+Cholesterol | status: PERMITTED_BASELINE_MVP
+Lecithin | status: PERMITTED_BASELINE_MVP
+Hydrogenated Lecithin | status: PERMITTED_BASELINE_MVP
+Polysorbate 20 | status: PERMITTED_BASELINE_MVP
+Polysorbate 60 | status: PERMITTED_BASELINE_MVP
+Polysorbate 80 | status: PERMITTED_BASELINE_MVP
+Disodium EDTA | status: PERMITTED_BASELINE_MVP
+Trisodium EDTA | status: PERMITTED_BASELINE_MVP
+Sodium PCA | status: PERMITTED_BASELINE_MVP
+Urea | status: PERMITTED_BASELINE_MVP
+Mannitol | status: PERMITTED_BASELINE_MVP
+Sorbitol | status: PERMITTED_BASELINE_MVP
+Trehalose | status: PERMITTED_BASELINE_MVP
+Maltodextrin | status: PERMITTED_BASELINE_MVP
+Cellulose Gum | status: PERMITTED_BASELINE_MVP
+Hydroxyethylcellulose | status: PERMITTED_BASELINE_MVP
+Hydroxypropyl Methylcellulose | status: PERMITTED_BASELINE_MVP
+Kaolin | status: PERMITTED_BASELINE_MVP
+Silica | status: PERMITTED_BASELINE_MVP
+Titanium Dioxide | note: function/nano/product-specific rules may apply | status: NEEDS_CONTEXT
+Zinc Oxide | note: function/nano/product-specific rules may apply | status: NEEDS_CONTEXT
+
+============================================================
+BANNED — GSO 1943:2024 ANNEX 2 / REFERENCED EU ANNEX II
+SELECTED ENTRIES FOR MVP
+============================================================
+
+N-(5-Chlorobenzoxazol-2-yl)acetamide | CAS 35783-57-4 | BANNED
+Acetylcholine and its salts | CAS 51-84-3 | BANNED
+Deanol aceglumate | CAS 3342-61-8 | BANNED
+Spironolactone | CAS 52-01-7 | BANNED
+Tiratricol and its salts | CAS 51-24-1 | BANNED
+Methotrexate | CAS 59-05-2 | BANNED
+Aminocaproic acid and its salts | CAS 60-32-2 | BANNED
+Cinchophen, its salts and derivatives | CAS 132-60-5 | BANNED
+Thyropropic acid and its salts | CAS 51-26-3 | BANNED
+Trichloroacetic acid | CAS 76-03-9 | BANNED
+Aconitum napellus L. leaves, roots and galenical preparations | CAS 84603-50-9 | BANNED
+Aconitine and its salts | CAS 302-27-2 | BANNED
+
+============================================================
+RESTRICTED — GSO 1943:2024 ANNEX 3 / REFERENCED EU ANNEX III
+============================================================
+
+Boric Acid / Borates / Tetraborates
+status: RESTRICTED
+conditions depend on product type and concentration
+
+Toluene-2,5-diamine
+status: RESTRICTED
+use: oxidative hair colouring
+maximum: 10% as free base
+
+Dichlorophen
+status: RESTRICTED
+maximum: 0.5%
+
+Hydrogen Peroxide
+status: RESTRICTED
+hair products: up to 12%
+skin products: up to 4%
+nail hardening: up to 2%
+oral products: up to 0.1%
+tooth-whitening 0.1-6%: professional/dental conditions apply
+eyelash products: up to 2%, professional use
+
+Hydroquinone
+status: RESTRICTED
+use: artificial nail systems
+maximum: 0.02% after mixing
+professional use only
+
+Potassium Hydroxide / Sodium Hydroxide
+status: RESTRICTED
+nail cuticle solvent: up to 5%
+hair straightening: up to 2% general / 4.5% professional
+depilatory pH adjuster: pH below 12.7
+other pH-adjusting uses: pH below 11
+
+Lithium Hydroxide
+status: RESTRICTED
+hair-straightening and pH-adjusting conditions apply
+
+Calcium Hydroxide
+status: RESTRICTED
+two-component hair straightening: up to 7%
+depilatory pH adjuster: pH below 12.7
+other uses: pH below 11
+
+1-Naphthol
+status: RESTRICTED
+oxidative hair colouring: up to 2.0%
+with hydrogen peroxide: maximum 1.0% upon application
+
+Sodium Nitrite
+status: RESTRICTED
+rust inhibitor: up to 0.2%
+not with nitrosamine-forming substances
+
+Nitromethane
+status: RESTRICTED
+rust inhibitor: up to 0.3%
+
+Quinine
+status: RESTRICTED
+hair rinse-off: up to 0.5% as quinine base
+hair leave-on: up to 0.2%
+
+Resorcinol
+status: RESTRICTED
+oxidative hair colouring: up to 5%
+hair lotions/shampoos: up to 0.5%
+
+Alkali Sulphides
+status: RESTRICTED
+depilatories: up to 2% as sulphur, pH <= 12.7
+
+Alkaline Earth Sulphides
+status: RESTRICTED
+depilatories: up to 6% as sulphur
+
+Water-Soluble Zinc Salts
+examples: Zinc Acetate, Zinc Chloride, Zinc Gluconate, Zinc Glutamate, Zinc Citrate, Zinc Sulphate
+status: RESTRICTED
+product-specific concentration limits apply
+
+Zinc Phenolsulfonate
+status: RESTRICTED
+deodorants/antiperspirants/astringent lotions: up to 6%
+
+Ammonium Monofluorophosphate
+status: RESTRICTED
+oral products; total fluoride up to 0.15% as F
+
+Sodium Monofluorophosphate
+status: RESTRICTED
+oral products; total fluoride up to 0.15% as F
+
+Musk Xylene
+status: RESTRICTED
+not for oral hygiene
+product-specific maximum concentrations apply
+
+Musk Ketone
+status: RESTRICTED
+not for oral hygiene
+product-specific maximum concentrations apply
+
+Salicylic Acid
+status: RESTRICTED
+rinse-off hair products: up to 3.0% for regulated non-preservative use
+other permitted product categories: generally up to 2.0% subject to conditions
+preservative use: up to 0.5% as acid
+child/oral/inhalation conditions apply
+
+Citral
+status: RESTRICTED
+product-specific maximum concentrations and allergen-labelling conditions apply
+
+Cinnamyl Alcohol
+status: RESTRICTED / DECLARATION_REQUIRED
+ingredient declaration threshold rules apply
+
+============================================================
+ALLOWED PRESERVATIVES — GSO ANNEX 5 / REFERENCED EU ANNEX V
+WITH CONDITIONS
+============================================================
+
+Benzoic Acid / Sodium Benzoate
+status: ALLOWED_PRESERVATIVE_WITH_CONDITIONS
+rinse-off except oral: up to 2.5% as acid
+oral: up to 1.7% as acid
+leave-on: up to 0.5% as acid
+
+Propionic Acid and permitted salts
+status: ALLOWED_PRESERVATIVE_WITH_CONDITIONS
+maximum: 2% as acid
+
+Salicylic Acid and permitted salts
+status: ALLOWED_PRESERVATIVE_WITH_CONDITIONS
+maximum preservative concentration: 0.5% as acid
+additional conditions apply
+
+Methylparaben
+status: ALLOWED_PRESERVATIVE_WITH_CONDITIONS
+
+Ethylparaben
+status: ALLOWED_PRESERVATIVE_WITH_CONDITIONS
+
+Propylparaben
+status: ALLOWED_PRESERVATIVE_WITH_CONDITIONS
+propyl/butyl paraben specific maximum and child-use conditions apply
+
+Butylparaben
+status: ALLOWED_PRESERVATIVE_WITH_CONDITIONS
+propyl/butyl paraben specific maximum and child-use conditions apply
+
+============================================================
+ADDITIONAL UAE/GSO REQUIREMENTS
+============================================================
+
+- Compliance is not determined by ingredients alone.
+- GSO 1943:2024 also covers product safety, labelling, packaging and claims.
+- Microbiological limits and relevant testing requirements apply.
+- GMP requirements apply.
+- Sunscreen products have additional GSO requirements.
+- Product claims must comply with GSO claims rules.
+- Ingredient concentration must not be invented if not supplied.
+
+============================================================
+DECISION RULES FOR BAYANAI
+============================================================
+
+1. Exact match in BANNED -> banned.
+2. Exact match in RESTRICTED -> restricted.
+3. Exact match in ALLOWED_* -> safe only if all supplied conditions are satisfied; otherwise restricted/needs_review.
+4. Exact match in PERMITTED_BASELINE_MVP -> safe for MVP screening, with note that this is not full UAE product approval.
+5. No match -> unknown.
+6. Never interpret unknown as safe.
+7. Never claim medical safety or full UAE registration compliance from ingredient screening alone.

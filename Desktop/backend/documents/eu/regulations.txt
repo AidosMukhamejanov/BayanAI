@@ -1,0 +1,315 @@
+BAYANAI REGULATORY DATASET
+REGION: EUROPEAN UNION
+VERSION: MVP dataset, prepared 2026-09-14
+
+PRIMARY LEGAL BASIS
+- Regulation (EC) No 1223/2009 on cosmetic products, consolidated text 18 May 2026.
+- Annex II: prohibited substances.
+- Annex III: restricted substances.
+- Annex IV: allowed colorants subject to conditions.
+- Annex V: allowed preservatives subject to conditions.
+- Annex VI: allowed UV filters subject to conditions.
+
+IMPORTANT
+PERMITTED_BASELINE_MVP is an engineering whitelist for the BayanAI MVP.
+It means that the ingredient is a common cosmetic INCI ingredient and this
+dataset does not identify a specific Annex II/III prohibition/restriction for
+ordinary cosmetic use. It is NOT a legal statement that every formulation
+containing the ingredient is automatically compliant or medically safe.
+
+============================================================
+PERMITTED_BASELINE_MVP
+============================================================
+
+Aqua | alias: Water | status: PERMITTED_BASELINE_MVP
+Glycerin | alias: Glycerol | status: PERMITTED_BASELINE_MVP
+Butylene Glycol | status: PERMITTED_BASELINE_MVP
+Propylene Glycol | status: PERMITTED_BASELINE_MVP
+Pentylene Glycol | status: PERMITTED_BASELINE_MVP
+Propanediol | status: PERMITTED_BASELINE_MVP
+Niacinamide | status: PERMITTED_BASELINE_MVP
+Panthenol | status: PERMITTED_BASELINE_MVP
+Sodium Hyaluronate | status: PERMITTED_BASELINE_MVP
+Hyaluronic Acid | status: PERMITTED_BASELINE_MVP
+Betaine | status: PERMITTED_BASELINE_MVP
+Allantoin | status: PERMITTED_BASELINE_MVP
+Squalane | status: PERMITTED_BASELINE_MVP
+Caprylic/Capric Triglyceride | status: PERMITTED_BASELINE_MVP
+Cetearyl Alcohol | status: PERMITTED_BASELINE_MVP
+Cetyl Alcohol | status: PERMITTED_BASELINE_MVP
+Stearyl Alcohol | status: PERMITTED_BASELINE_MVP
+Behenyl Alcohol | status: PERMITTED_BASELINE_MVP
+Glyceryl Stearate | status: PERMITTED_BASELINE_MVP
+PEG-100 Stearate | status: PERMITTED_BASELINE_MVP
+Dimethicone | status: PERMITTED_BASELINE_MVP
+Cyclopentasiloxane | status: PERMITTED_BASELINE_MVP
+Carbomer | status: PERMITTED_BASELINE_MVP
+Xanthan Gum | status: PERMITTED_BASELINE_MVP
+Sodium Chloride | status: PERMITTED_BASELINE_MVP
+Citric Acid | status: PERMITTED_BASELINE_MVP
+Sodium Citrate | status: PERMITTED_BASELINE_MVP
+Lactic Acid | status: PERMITTED_BASELINE_MVP
+Tocopherol | status: PERMITTED_BASELINE_MVP
+Tocopheryl Acetate | status: PERMITTED_BASELINE_MVP
+Ascorbyl Glucoside | status: PERMITTED_BASELINE_MVP
+Magnesium Ascorbyl Phosphate | status: PERMITTED_BASELINE_MVP
+Sodium Ascorbyl Phosphate | status: PERMITTED_BASELINE_MVP
+Ceramide NP | status: PERMITTED_BASELINE_MVP
+Ceramide AP | status: PERMITTED_BASELINE_MVP
+Ceramide EOP | status: PERMITTED_BASELINE_MVP
+Cholesterol | status: PERMITTED_BASELINE_MVP
+Lecithin | status: PERMITTED_BASELINE_MVP
+Hydrogenated Lecithin | status: PERMITTED_BASELINE_MVP
+Polysorbate 20 | status: PERMITTED_BASELINE_MVP
+Polysorbate 60 | status: PERMITTED_BASELINE_MVP
+Polysorbate 80 | status: PERMITTED_BASELINE_MVP
+Disodium EDTA | status: PERMITTED_BASELINE_MVP
+Trisodium EDTA | status: PERMITTED_BASELINE_MVP
+Sodium PCA | status: PERMITTED_BASELINE_MVP
+Urea | status: PERMITTED_BASELINE_MVP
+Mannitol | status: PERMITTED_BASELINE_MVP
+Sorbitol | status: PERMITTED_BASELINE_MVP
+Trehalose | status: PERMITTED_BASELINE_MVP
+Maltodextrin | status: PERMITTED_BASELINE_MVP
+Cellulose Gum | status: PERMITTED_BASELINE_MVP
+Hydroxyethylcellulose | status: PERMITTED_BASELINE_MVP
+Hydroxypropyl Methylcellulose | status: PERMITTED_BASELINE_MVP
+Kaolin | status: PERMITTED_BASELINE_MVP
+Silica | status: PERMITTED_BASELINE_MVP
+Titanium Dioxide | note: ordinary non-nano use; specific colorant/UV/nano rules may apply | status: NEEDS_CONTEXT
+Zinc Oxide | note: specific colorant/UV/nano rules may apply | status: NEEDS_CONTEXT
+
+============================================================
+BANNED — ANNEX II (SELECTED OFFICIAL ENTRIES)
+============================================================
+
+N-(5-Chlorobenzoxazol-2-yl)acetamide | CAS 35783-57-4 | Annex II 1 | BANNED
+Acetylcholine and its salts | CAS 51-84-3 | Annex II 2 | BANNED
+Deanol aceglumate | CAS 3342-61-8 | Annex II 3 | BANNED
+Spironolactone | CAS 52-01-7 | Annex II 4 | BANNED
+Tiratricol and its salts | CAS 51-24-1 | Annex II 5 | BANNED
+Methotrexate | CAS 59-05-2 | Annex II 6 | BANNED
+Aminocaproic acid and its salts | CAS 60-32-2 | Annex II 7 | BANNED
+Cinchophen, its salts and derivatives | CAS 132-60-5 | Annex II 8 | BANNED
+Thyropropic acid and its salts | CAS 51-26-3 | Annex II 9 | BANNED
+Trichloroacetic acid | CAS 76-03-9 | Annex II 10 | BANNED
+Aconitum napellus L. leaves, roots and galenical preparations | CAS 84603-50-9 | Annex II 11 | BANNED
+Aconitine and its salts | CAS 302-27-2 | Annex II 12 | BANNED
+
+============================================================
+RESTRICTED — ANNEX III / OTHER POSITIVE-LIST CONDITIONS
+============================================================
+
+Boric Acid / Borates / Tetraborates
+status: RESTRICTED
+example condition: talc up to 5% as boric acid; additional age/skin conditions apply
+source: Annex III 1a
+
+Toluene-2,5-diamine
+status: RESTRICTED
+use: oxidising hair colouring agent
+maximum: 10% as free base
+source: Annex III 9
+
+Dichlorophen
+status: RESTRICTED
+maximum: 0.5%
+warning: Contains Dichlorophen
+source: Annex III 11
+
+Hydrogen Peroxide
+status: RESTRICTED
+hair products: up to 12% H2O2 present or released
+skin products: up to 4%
+nail hardening: up to 2%
+oral products: up to 0.1%
+tooth whitening 0.1-6%: special dental-professional conditions apply
+eyelash products: up to 2%, professional use
+source: Annex III 12
+
+Hydroquinone
+status: RESTRICTED
+use: artificial nail systems
+maximum: 0.02% after mixing for use
+professional use only
+source: Annex III 14
+
+Potassium Hydroxide / Sodium Hydroxide
+status: RESTRICTED
+nail cuticle solvent: up to 5%
+hair straightener: up to 2% general use; up to 4.5% professional use
+depilatory pH adjuster: pH below 12.7
+other pH-adjusting uses: pH below 11
+source: Annex III 15a
+
+Lithium Hydroxide
+status: RESTRICTED
+hair straightening and pH-adjusting conditions apply
+source: Annex III 15b
+
+Calcium Hydroxide
+status: RESTRICTED
+hair straightening two-component systems: up to 7% as calcium hydroxide
+depilatory pH adjuster: pH below 12.7
+other uses: pH below 11
+source: Annex III 15c
+
+1-Naphthol
+status: RESTRICTED
+use: oxidative hair colouring
+maximum: 2.0%; in combination with hydrogen peroxide maximum use concentration on application 1.0%
+source: Annex III 16
+
+Sodium Nitrite
+status: RESTRICTED
+use: rust inhibitor
+maximum: 0.2%
+condition: not with secondary/tertiary amines or other nitrosamine-forming substances
+source: Annex III 17
+
+Nitromethane
+status: RESTRICTED
+use: rust inhibitor
+maximum: 0.3%
+source: Annex III 18
+
+Quinine
+status: RESTRICTED
+hair rinse-off: up to 0.5% as quinine base
+hair leave-on: up to 0.2% as quinine base
+source: Annex III 21
+
+Resorcinol
+status: RESTRICTED
+oxidative hair colouring: up to 5%
+hair lotions and shampoos: up to 0.5%
+warnings/conditions apply
+source: Annex III 22
+
+Alkali Sulphides
+status: RESTRICTED
+use: depilatories
+maximum: 2% as sulphur
+pH: <= 12.7
+source: Annex III 23
+
+Alkaline Earth Sulphides
+status: RESTRICTED
+use: depilatories
+maximum: 6% as sulphur
+source: Annex III 23
+
+Water-Soluble Zinc Salts
+examples: Zinc Acetate, Zinc Chloride, Zinc Gluconate, Zinc Glutamate, Zinc Citrate, Zinc Sulphate
+status: RESTRICTED
+current limits depend on product category; 2026 amendment includes toothpaste/mouthwash-specific limits
+source: Annex III 24, as amended in 2026
+
+Zinc Phenolsulfonate
+status: RESTRICTED
+use: deodorants, antiperspirants, astringent lotions
+maximum: 6% as anhydrous substance
+source: Annex III 25
+
+Ammonium Monofluorophosphate
+status: RESTRICTED
+use: oral products
+maximum total fluoride: 0.15% as F
+source: Annex III 26
+
+Sodium Monofluorophosphate
+status: RESTRICTED
+use: oral products
+maximum total fluoride: 0.15% as F
+source: Annex III 27
+
+Musk Xylene
+status: RESTRICTED
+not for oral-hygiene products
+perfume/eau de parfum: up to 1.0%
+eau de toilette: up to 0.4%
+other cosmetics: up to 0.03%
+source: Annex III 96
+
+Musk Ketone
+status: RESTRICTED
+not for oral-hygiene products
+perfume/eau de parfum: up to 1.4%
+eau de toilette: up to 0.56%
+other cosmetics: up to 0.042%
+source: Annex III 97
+
+Salicylic Acid
+status: RESTRICTED
+rinse-off hair products: up to 3.0% for regulated non-preservative use
+other allowed products: generally up to 2.0% subject to exclusions/conditions
+preservative use: up to 0.5% as acid under Annex V conditions
+child-age, oral-use and inhalation restrictions apply
+source: Annex III 98 and Annex V 3
+
+Citral
+status: RESTRICTED
+product-specific maximum concentrations apply
+ingredient-list allergen declaration thresholds also apply
+source: Annex III 70, current consolidated text
+
+Cinnamyl Alcohol
+status: RESTRICTED / DECLARATION_REQUIRED
+must be declared in ingredients above 0.001% in leave-on products or 0.01% in rinse-off products
+source: Annex III 69
+
+============================================================
+ALLOWED PRESERVATIVES — POSITIVE LIST, WITH CONDITIONS
+============================================================
+
+Benzoic Acid / Sodium Benzoate
+status: ALLOWED_PRESERVATIVE_WITH_CONDITIONS
+rinse-off except oral: up to 2.5% as acid
+oral products: up to 1.7% as acid
+leave-on: up to 0.5% as acid
+source: Annex V 1
+
+Propionic Acid and permitted salts
+status: ALLOWED_PRESERVATIVE_WITH_CONDITIONS
+maximum: 2% as acid
+source: Annex V 2
+
+Salicylic Acid and permitted salts
+status: ALLOWED_PRESERVATIVE_WITH_CONDITIONS
+maximum: 0.5% as acid
+additional child/oral/inhalation conditions apply
+source: Annex V 3
+
+Methylparaben
+status: ALLOWED_PRESERVATIVE_WITH_CONDITIONS
+part of paraben positive-list system
+source: Annex V
+
+Ethylparaben
+status: ALLOWED_PRESERVATIVE_WITH_CONDITIONS
+part of paraben positive-list system
+source: Annex V
+
+Propylparaben
+status: ALLOWED_PRESERVATIVE_WITH_CONDITIONS
+maximum for propyl/butyl parabens and salts: 0.14% as acid for sum of individual concentrations
+additional child nappy-area restrictions apply
+source: Annex V 12a
+
+Butylparaben
+status: ALLOWED_PRESERVATIVE_WITH_CONDITIONS
+maximum for propyl/butyl parabens and salts: 0.14% as acid for sum of individual concentrations
+additional child nappy-area restrictions apply
+source: Annex V 12a
+
+============================================================
+DECISION RULES FOR BAYANAI
+============================================================
+
+1. Exact match in BANNED -> banned.
+2. Exact match in RESTRICTED -> restricted.
+3. Exact match in ALLOWED_* -> safe only if supplied conditions can be verified; otherwise restricted/needs_review.
+4. Exact match in PERMITTED_BASELINE_MVP -> safe for MVP screening, with note that this is not full legal approval.
+5. No match -> unknown.
+6. Never interpret unknown as safe.
+7. Never claim medical safety.
